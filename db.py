@@ -7,7 +7,7 @@ def initialize_prompt_and_text(session_state):
     key: str = os.environ.get("SUPABASE_KEY")
 
     supabase: Client = create_client(url, key)
-    data, count = supabase.table("bots_dev").select("*").eq("id", "andy").execute()
+    data, count = supabase.table("bots_dev").select("*").eq("id", "aria").execute()
     bot_info = data[1][0]
 
     system_prompt = bot_info['system_prompt']
