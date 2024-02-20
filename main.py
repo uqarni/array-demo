@@ -7,26 +7,12 @@ import dotenv
 dotenv.load_dotenv()
 
 
-default_project_value = '''Category: Interior Painting
-Travel Preferences: Professional must travel to my address.
-Property Type: Home
-Number of Rooms: 4 rooms
-Surfaces: Walls
-Ceiling Height: 8 - 10 feet (standard ceiling)
-Painting Type: Repainting, with same color
-Wall Condition: Excellent - clean and smooth
-Paint Supplier: Homeowner or property manager
-New Construction: No, this is not new construction
-Room Prep Needed: No, I will move things out of the way myself
-Zip Code: 33611
-'''
-
 ### Sidebar
 st.sidebar.title("Inputs")
 st.sidebar.write('modify these then press Start/Restart on the right')
-lead_name = st.sidebar.text_input("Lead First Name", value = "Susan")
-loc = st.sidebar.text_input("Location", value = "Tampa, FL")
-pd = st.sidebar.text_area("Project Description", value = default_project_value, height = 300)
+lead_first_name = st.sidebar.text_input("Lead First Name", value = "Susan")
+company_name = st.sidebar.text_input("Company Name", value = "Acme Co")
+industry = st.sidebar.text_input("Industry", value = "Health Insurance")
 temp = 0#st.sidebar.slider("Temperature", min_value = 0.0, max_value = 1.0, value = 0.0, step = 0.1)
 model = "gpt-4-1106-preview"#st.sidebar.selectbox("Model", ["gpt-4-1106-preview", "gpt-3.5-turbo"])
 max_tokens = 200#st.sidebar.slider("Max Tokens", min_value = 50, max_value = 500, value = 200, step = 50)
@@ -35,15 +21,15 @@ max_tokens = 200#st.sidebar.slider("Max Tokens", min_value = 50, max_value = 500
 
 client = OpenAI()
 
-st.title("AI Thomas Chatbot")
+st.title("Array: Andy Testing Site")
 
 if st.button("Start/Restart"):
     #clear all session state
     st.session_state.clear()
     st.session_state.messages = []
-    st.session_state.lead_name = lead_name
-    st.session_state.loc = loc
-    st.session_state.pd = pd
+    st.session_state.lead_first_name = lead_first_name
+    st.session_state.company_name = company_name
+    st.session_state.industry = industry
     st.session_state.temp = temp
     st.session_state.model = model
     st.session_state.max_tokens = max_tokens
@@ -85,15 +71,3 @@ if "messages" in st.session_state:
 
         #     response = st.write_stream(stream)
         # st.session_state.messages.append({"role": "assistant", "content": response})
-
-
-
-
-
-
-
-
-
-
-
-
