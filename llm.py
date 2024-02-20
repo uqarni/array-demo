@@ -9,7 +9,7 @@ openai = OpenAI(max_retries = 5)
 
 
 
-def generate_streaming_response(self, messages, model = 'gpt-4-1106-preview', max_tokens=200):
+def generate_streaming_response(self, messages, model = 'gpt-4-turbo-preview', max_tokens=200):
     try:
         response = openai.chat.completions.create(model=model, messages=messages, max_tokens=max_tokens, stream=True)
         big_chunk = ""
