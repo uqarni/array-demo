@@ -14,7 +14,7 @@ def initialize_prompt_and_text(session_state):
     initial_text = bot_info['initial_text']
     to_format = {
         'lead_first_name': session_state.lead_first_name,
-        'agent_name': 'Andy',
+        'agent_name': 'Aria',
         'industry': session_state.industry,
         'company_name': session_state.company_name,
         'booking_link': 'array_booking.com'
