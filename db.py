@@ -15,8 +15,10 @@ def initialize_prompt_and_text(session_state):
     to_format = {
         'lead_first_name': session_state.lead_first_name,
         'agent_name': 'Aria',
-        'industry': session_state.industry,
         'company_name': session_state.company_name,
+        'mobile_vendor': session_state.mobile_vendor,
+        "bank_or_credit_union": session_state.bank_or_credit_union,
+        "customer_type": session_state.customer_type,
         'booking_link': 'array_booking.com'
     }
     initial_text = initial_text.format(**to_format)
