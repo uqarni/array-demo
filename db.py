@@ -17,7 +17,6 @@ def initialize_prompt_and_text(session_state):
         'company_name': session_state.company_name,
         'mobile_vendor': session_state.mobile_vendor,
         'lead_industry': session_state.industry,
-        "customer_type": session_state.customer_type,
         'booking_link': 'array_booking.com'
     }
     initial_text = initial_text.format(**to_format)
