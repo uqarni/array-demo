@@ -16,7 +16,7 @@ def initialize_prompt_and_text(session_state):
         'agent_name': 'Aria',
         'company_name': session_state.company_name,
         'mobile_vendor': session_state.mobile_vendor,
-        "bank_or_credit_union": session_state.bank_or_credit_union,
+        'lead_industry': session_state.industry,
         "customer_type": session_state.customer_type,
         'booking_link': 'array_booking.com'
     }
