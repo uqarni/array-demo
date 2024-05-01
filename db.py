@@ -19,9 +19,8 @@ def initialize_prompt_and_text(session_state):
         'lead_industry': session_state.industry,
         'booking_link': 'array_booking.com'
     }
-    initial_text = initial_text.format(**to_format)
-    system_prompt = system_prompt.format(**to_format)
 
+    system_prompt = system_prompt.format(**to_format)
     session_state.system_prompt = system_prompt
 
     if session_state.industry == "Solar":
@@ -36,6 +35,7 @@ def initialize_prompt_and_text(session_state):
         initial_text = "Hi {lead_first_name},\n\nMortgage companies are using Array's platform to:\n\n-determine consumer eligibility\n\n-prioritize borrowers for mortgage or refi products and\n\n-increase conversion rates\n\nCurious how {company_name} could leverage consumer level credit data?"
     elif session_state.industry == "Home Services":
         initial_text = "{lead_first_name},\n\nToo many unqualified leads or chargebacks?\n\nWe can solve that in an eligibility workflow.\n\nOur credit tools help home services organizations like yours determine consumer eligibility, reducing the number of disqualified leads and chargebacks.\n\nCurious to learn how we do it?"
-    
+
+    initial_text = initial_text.format(**to_format)
     session_state.initial_text = initial_text
     session_state.messages.insert(0, {'role': 'assistant', 'content': initial_text})
