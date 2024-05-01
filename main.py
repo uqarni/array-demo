@@ -30,11 +30,7 @@ if st.button("Start/Restart"):
     st.session_state.messages = []
     st.session_state.lead_first_name = lead_first_name
     st.session_state.company_name = company_name
-    st.session_state.bank_or_credit_union = bank_or_credit_union
-    if bank_or_credit_union == "Bank":
-        st.session_state.customer_type = "customer"
-    elif bank_or_credit_union == "Credit Union":
-        st.session_state.customer_type = "member"
+    st.session_state.industry = industry
     st.session_state.mobile_vendor = mobile_vendor
     st.session_state.temp = temp
     st.session_state.model = model
