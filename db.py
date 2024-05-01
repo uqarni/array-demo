@@ -32,7 +32,7 @@ def initialize_prompt_and_text(session_state):
     elif session_state.industry == "Lead Generators":
         initial_text = "Hey {lead_first_name},\n\nAre you looking at credit data for new leads?\n\nOur credit technology provides insight into your consumer's credit profile - making it easy to prioritize leads, lower marketing costs, and drive conversions."
     elif session_state.industry == 'Insurance':
-         initial_text = "{lead_first_name} - \n\nAt Array, we help insurance companies like yours better engage and understand their customers.\n\nWe have hundreds of partners leveraging our consumer-facing tools and back-end data layer today.\n\nWould increasing your consumer engagement be worth a conversation?\n\nLet me know if this sounds relevant, would love to chat.'
+         initial_text = "{lead_first_name} - \n\nAt Array, we help insurance companies like yours better engage and understand their customers.\n\nWe have hundreds of partners leveraging our consumer-facing tools and back-end data layer today.\n\nWould increasing your consumer engagement be worth a conversation?\n\nLet me know if this sounds relevant, would love to chat."
     elif session_state.industry == "Mortgage":
         initial_text = "Hi {lead_first_name},\n\nMortgage companies are using Array's platform to:\n\n-determine consumer eligibility\n\n-prioritize borrowers for mortgage or refi products and\n\n-increase conversion rates\n\nCurious how {company_name} could leverage consumer level credit data?"
     elif session_state.industry == "Home Services":
