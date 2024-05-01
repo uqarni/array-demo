@@ -12,11 +12,11 @@ st.sidebar.title("Inputs")
 st.sidebar.write('modify these then press Start/Restart on the right')
 lead_first_name = st.sidebar.text_input("Lead First Name", value = "Susan")
 company_name = st.sidebar.text_input("Company Name", value = "Acme Co")
-bank_or_credit_union = st.sidebar.selectbox("Bank or Credit Union", ["Bank", "Credit Union"])
 mobile_vendor = st.sidebar.selectbox("Mobile Vendor", ["Banno", "CSI", "Q2", "Alkami"])
+industry = st.sidebar.selectbox("Industry", ["Solar", "Telecom/Energy/Utilities", "Lead Generators", "Insurance", "Mortgage", "Home Services"])
 temp = 0#st.sidebar.slider("Temperature", min_value = 0.0, max_value = 1.0, value = 0.0, step = 0.1)
-model = "gpt-4-1106-preview"#st.sidebar.selectbox("Model", ["gpt-4-1106-preview", "gpt-3.5-turbo"])
-max_tokens = 200#st.sidebar.slider("Max Tokens", min_value = 50, max_value = 500, value = 200, step = 50)
+model = "gpt-4-turbo"#st.sidebar.selectbox("Model", ["gpt-4-1106-preview", "gpt-3.5-turbo"])
+max_tokens = 250#st.sidebar.slider("Max Tokens", min_value = 50, max_value = 500, value = 200, step = 50)
 ####Main Bar
     
 
